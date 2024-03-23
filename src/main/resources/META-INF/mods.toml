@@ -13,7 +13,7 @@ logoFile="examplemod.png"
 authors="CerbonXD"
 #displayTest="MATCH_VERSION" # MATCH_VERSION is the default if nothing is specified (#optional)
 
-description='''Allows zombies to spawn during the day'''
+description='''Allow zombies to spawn during the day'''
 
 [[dependencies.daylight_zombies]]
     modId="forge"
