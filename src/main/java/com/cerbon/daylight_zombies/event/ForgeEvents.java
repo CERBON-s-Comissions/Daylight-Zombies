@@ -1,7 +1,7 @@
 package com.cerbon.daylight_zombies.event;
 
 import com.cerbon.daylight_zombies.DaylightZombies;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,7 +12,7 @@ public class ForgeEvents {
 
     @SubscribeEvent
     public static void onCheckSpawn(LivingSpawnEvent.CheckSpawn event) {
-        if (event.getEntity().getType() == EntityType.ZOMBIE)
+        if (event.getEntity() instanceof Zombie)
             event.setResult(Event.Result.ALLOW);
     }
 }
