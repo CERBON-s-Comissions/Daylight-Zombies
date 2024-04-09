@@ -4,10 +4,7 @@ import com.cerbon.daylight_zombies.DaylightZombies;
 import com.cerbon.daylight_zombies.config.DZConfig;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
-import net.minecraftforge.event.entity.living.LivingSpawnEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,12 +15,6 @@ import java.util.HashSet;
 public class ForgeEvents {
 
     private static HashSet<? extends EntityType<?>> decreaseSpawn;
-
-    @SubscribeEvent
-    public static void onCheckSpawn(LivingSpawnEvent.CheckSpawn event) {
-        if (event.getEntity() instanceof Zombie)
-            event.setResult(Event.Result.ALLOW);
-    }
 
     @SubscribeEvent
     public static void onEntityJoinLevel(EntityJoinLevelEvent event) {
